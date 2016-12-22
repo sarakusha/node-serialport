@@ -435,7 +435,7 @@ function SerialPortFactory(_spfOptions) {
     self.emit('close');
 
     // clean up all other items
-    fd = self.fd;
+    let fd = self.fd;
 
     try {
       factory.SerialPortBinding.close(fd, function (err) {
